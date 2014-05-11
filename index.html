@@ -7,12 +7,14 @@
     </head>
 <body>
 
-	<header>primary</header>
-	
+	<header>
+    <p>primary
+  </header>
+
 	<nav>
-		<a href="#">secondary</a>
+		<p><a href="#">secondary</a>
 	</nav>
-	
+
 	<main>
 		<article>
 			<p>Beste cliënt, verwijzer of opdrachtgever,
@@ -27,7 +29,19 @@ DKP houdt voortdurend een vinger aan de (wetenschappelijke) pols, waardoor wij o
 
 	<footer>Copyright 2013</footer>
 	</main>
-	
+
+  <script>
+    var header = document.querySelector('body > header');
+    var nav = document.querySelector('body > nav');
+    var article = document.querySelector('body > main > article');
+    for (var i = 0; i < 6; i++) {
+      header.innerHTML += header.innerHTML;
+      nav.innerHTML += nav.innerHTML;
+    }
+    for (var i = 0; i < 3; i++) {
+      article.innerHTML += article.innerHTML;
+    }
+  </script>
 
 </body>
 </html>
