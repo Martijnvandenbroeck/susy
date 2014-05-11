@@ -1,0 +1,43 @@
+$susy: ( container: 100%, container-position: left, columns: 10, output: isolate, debug: ( image: hide ) )
+
+html
+  position: relative
+  height: 100%
+  min-width: 960px
+body
+  width: 100%
+  height: 100%
+  > header, > nav, > main
+    overflow-y: auto
+  > header
+    height: 100%    
+    background: #fff
+    width: 225px    
+    float: left
+  > main
+    +container(show)
+    max-width: span(7 of 10)
+    margin-left: auto
+    height: 100%
+    > article, aside
+      +span(8 of 10 at 2)
+    &.default
+      //padding-left: gutter()
+      //padding-right: gutter()
+      //left: span($primary + $secondary)
+      //+span(12 - $primary - $secondary wide)
+      > article
+        //max-width: 40em
+  > nav
+    background: #cbcbcb 
+    height: 100%    
+    width: 225px
+    float: left
+    &.with-icons
+      //$span: 2
+      //+span($span wide)
+      //+ main
+        //+span(12 - $primary - $span wide)
+        //left: span($primary + $span)
+  footer
+    clear: both    
